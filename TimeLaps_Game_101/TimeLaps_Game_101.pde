@@ -18,6 +18,9 @@ int H = 100;
 
 //GameMenu
 int XMenu = 1400;
+int iso = 0;
+int Expo =0;
+int Ximages =0;
 
 
 void setup()
@@ -86,58 +89,4 @@ void mousePressed()
 }
 void keyPressed()
 {
-}
-
-void GameMenu()
-{  
-  fill(50, 50, 50);
-  rect(XMenu, 150, 500, 400, 25);
-  textSize(50);
-  fill(255);
-  text("ISO = ", XMenu, 200);
-  text("EXPO TIME = ", XMenu, 300);
-  text("X  Images = ", XMenu, 400);
-
-  //Place Buttons to control the game
-  DrawButton("ISO", 75, 900);
-  DrawButton("EXPO TIME", 475, 900);
-  DrawButton("X Images", 875, 900);
-}
-
-void DrawButton(String text, int ButtonX, int ButtonY) //NTS HOW TO JUSE COMMAND DRAWBUTTON: DrawButton("TEXT TO BE SHOWN",PLACEMENT IN X & Y NORTH WEST CORNER//
-{
-  textSize(40);
-  fill(255);
-  text(text, ButtonX, ButtonY-40);
-  //Base Background BUTTON Collor
-  fill(255);
-  rect(ButtonX, ButtonY, 250, 100, 25);
-
-  //Button +
-  fill(80, 80, 80);
-  rect(ButtonX, ButtonY, 125, 100, 25);
-  textSize(100);
-  fill(255);
-  text("+", ButtonX+30, ButtonY+30);
-
-  //Button -
-  fill(80, 80, 80);
-  rect(ButtonX+125, ButtonY, 125, 100, 25);
-  fill(255);
-  text("-", ButtonX+30+125, ButtonY+30);
-
-  //Read if mouse is in the area and mousePressed:
-  //IF BUTTON + IS PRESSED LIGHT UP KEY
-  if (mouseX > ButtonX && mouseX < ButtonX+125 && mouseY > ButtonY && mouseY < ButtonY+100 && mousePressed)
-  {
-    fill(80, 250, 80);
-    rect(ButtonX, ButtonY, 125, 100, 25);
-  }
-  //Read if mouse is in the area and mousePressed:
-  //IF BUTTON - IS PRESSED LIGHT UP KEY
-  if (mouseX > ButtonX+125 && mouseX < ButtonX+250 && mouseY > ButtonY && mouseY < ButtonY+100 && mousePressed)
-  {
-    fill(80, 250, 80);
-    rect(ButtonX+125, ButtonY, 125, 100, 25);
-  }
 }
