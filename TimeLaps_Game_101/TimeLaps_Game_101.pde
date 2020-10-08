@@ -30,9 +30,10 @@ int XMenu = 1400;
 int iso = 0;
 int Expo =0;
 int Ximages =0;
-
+int i0;
 //Class
 stars s1;
+int Start = 0;
 
 void setup()
 {
@@ -84,15 +85,22 @@ void draw()
     if(u<1){
     background(4); 
     u++;
+    println("BAckground");
+    
     }
+    
     GameMenu();
-    fill(255);
+    println("gamemenu");
+    if(Start==1){
+    println("Stage");
+    //fill(iso);
    // rect(75, 50, 1250, 700);
     //image(GameWindow, 75, 50, 1250, 700); //Load Background image fore game window.
     
     s1.displayEllipse(255);
+    iso = 3200;
     //rect(1000,300,300,100);
-  }
+  }}
 }
 void mousePressed()
 {

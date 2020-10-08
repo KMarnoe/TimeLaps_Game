@@ -13,4 +13,6 @@ void GameMenu()
   DrawButton("ISO", 75, 900);
   DrawButton("EXPO TIME", 475, 900);
   DrawButton("X Images", 875, 900);
+  DrawButtonStart("START", 1275, 900);
+  DrawButtonRestart("RESTART", 1575, 900);
 }
