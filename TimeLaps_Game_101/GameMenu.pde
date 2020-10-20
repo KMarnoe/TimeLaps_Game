@@ -1,5 +1,6 @@
 void GameMenu()
 {  
+  //not mush happening here HAHSHSFIn BRain meldDOwn
   stroke(0);
   fill(50, 50, 50);
   rect(XMenu, 150, 500, 400, 25);

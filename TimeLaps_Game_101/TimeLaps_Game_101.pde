@@ -26,6 +26,7 @@ float r;
 float s = 2;
 int i;
 
+
 int XMenu = 1400;
 int iso = 0;
 int Expo =0;
@@ -35,9 +36,12 @@ int i0;
 stars s1;
 int Start = 0;
 
+
+
+int restartButton=0;
 void setup()
 {
-  stage =3;
+  stage = 3;
   //Include the background "Timelapse"
   size(displayWidth, displayHeight);
 
@@ -51,7 +55,7 @@ void setup()
   titel  = createFont("Georgia", 80);
   textFont(titel);
   textAlign(0, CENTER);
-  
+
   s1 = new stars();
 }
 
@@ -65,13 +69,14 @@ void draw()
 
   if (stage ==1) {
     text("Welcome Dear Friend", 100, 450);
-    text("Press any button to start", 100, 510);
+    text("Press ENTER to start", 100, 510);
     if (key == ENTER) {
       background(255);   
-      stage=2;
+      stage=3;
     }
   }
-  if (stage ==2) {
+
+  if (stage ==2) { //STAGE 2 is curently not in the game
     image(Menu_Screen, 0, 0, displayWidth, displayHeight);
     fill(255);
     //rect(X, Y, W, H, 50);
@@ -80,27 +85,30 @@ void draw()
     fill(0);
     text("START GAME", width/2-150, height/2+100);
   }
+
   //REAL GAME START HERE
   if (stage == 3) {
-    if(u<1){
-    background(4); 
-    u++;
-    println("BAckground");
-    
+    if (u<1) {
+      //Remove Background after every game
+      background(4); 
+      u++;
+      println("BAckground");
     }
-    
+
+
     GameMenu();
     println("gamemenu");
-    if(Start==1){
-    println("Stage");
-    //fill(iso);
-   // rect(75, 50, 1250, 700);
-    //image(GameWindow, 75, 50, 1250, 700); //Load Background image fore game window.
-    
-    s1.displayEllipse(255);
-    iso = 3200;
-    //rect(1000,300,300,100);
-  }}
+    if (Start==1) {
+      println("Stage");
+      //fill(iso);
+      // rect(75, 50, 1250, 700);
+      //image(GameWindow, 75, 50, 1250, 700); //Load Background image fore game window.
+
+      s1.displayEllipse(255, restartButton);
+      iso = 3200;
+      restartButton=0;
+    }
+  }
 }
 void mousePressed()
 {

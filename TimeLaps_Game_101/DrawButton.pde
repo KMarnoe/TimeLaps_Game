@@ -1,3 +1,5 @@
+//*************************************************************READ BUTTONS START*****************************************************************************************//
+
 void DrawButtonStart(String text, int ButtonX, int ButtonY) {
   stroke(0);
   textSize(60);
@@ -8,7 +10,6 @@ void DrawButtonStart(String text, int ButtonX, int ButtonY) {
   fill(255);
   text(text, ButtonX+30, ButtonY+40);
   //Base Background BUTTON Collor
-  //  //*************************************************************READ BUTTONS START*****************************************************************************************//
 
   if (mouseX > ButtonX && mouseX < ButtonX+250 && mouseY > ButtonY && mouseY < ButtonY+100 && mousePressed && text=="START")
   {
@@ -16,9 +17,10 @@ void DrawButtonStart(String text, int ButtonX, int ButtonY) {
     fill(250, 80, 80);
     rect(ButtonX, ButtonY, 250, 100, 25);
     delay(100);
-     println("START");
+    println("START");
   }
 }
+//*************************************************************READ BUTTONS RESTART*****************************************************************************************//
 
 void DrawButtonRestart(String text, int ButtonX, int ButtonY) {
   stroke(0);
@@ -30,16 +32,17 @@ void DrawButtonRestart(String text, int ButtonX, int ButtonY) {
   fill(255);
   text(text, ButtonX+30, ButtonY+40);
   //Base Background BUTTON Collor
-  //  //*************************************************************READ BUTTONS RESTART*****************************************************************************************//
 
   if (mouseX > ButtonX && mouseX < ButtonX+250 && mouseY > ButtonY && mouseY < ButtonY+100 && mousePressed && text=="RESTART")
   {
+    //Restart game 
     u=0;
-    
-    ys = displayHeight/2;
-    x = displayWidth/2;
+    restartButton=1;
     y=0;
-    fill(250, 80, 80);
+    Start=0;
+    //
+    
+    fill(250, 80, 250);
     rect(ButtonX, ButtonY, 250, 100, 25);
     delay(100);
     println("RESTART");
