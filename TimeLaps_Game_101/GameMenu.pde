@@ -1,6 +1,7 @@
 void GameMenu()
 {  
-  //not mush happening here HAHSHSFIn BRain meldDOwn
+  //not mush happening here HAHSHSFIn BRain meldDOwn 
+  //basic just drawing buttons and some text here and thereeee.
   stroke(0);
   fill(50, 50, 50);
   rect(XMenu, 150, 500, 400, 25);

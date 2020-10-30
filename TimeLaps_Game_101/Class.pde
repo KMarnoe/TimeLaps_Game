@@ -16,10 +16,7 @@ class stars {
   int i = 0;
   stars() {
   }
-  void display(float iso) {
-
-
-
+  void display(float iso) {//dont actally thing this part is in the main game :/ 
     stroke(random(50, 100), 0, random(100, 255), iso);
 
     line(x, y, xs, ys );
